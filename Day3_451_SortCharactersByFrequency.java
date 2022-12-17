@@ -18,7 +18,7 @@ import java.util.TreeSet;
 
 class Day3_451_SortCharactersByFrequency {
     
-    private class Data <Character, Integer>{
+    private class Data {
         private final char c;
         private final int freq;
 
@@ -37,7 +37,7 @@ class Day3_451_SortCharactersByFrequency {
     }
     
     public String frequencySort(String s) {
-        Comparator <Data<Character, Integer>> compareFreq = (Data<Character, Integer> data1, Data<Character, Integer> data2) -> {
+        Comparator <Data> compareFreq = (Data data1, Data data2) -> {
             if (data2.getFreq() > data1.getFreq())
                 return 1;
             else 
@@ -48,7 +48,7 @@ class Day3_451_SortCharactersByFrequency {
         for (char c : s.toCharArray()) {
             map.put(c, map.getOrDefault(c, 0)+1);
         }
-        Set <Data<Character, Integer>> set = new TreeSet<>(compareFreq);
+        Set <Data> set = new TreeSet<>(compareFreq);
         
         map.entrySet().forEach(x-> {
             set.add(new Data(x.getKey(), x.getValue()));
