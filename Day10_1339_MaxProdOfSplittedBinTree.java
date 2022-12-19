@@ -7,8 +7,8 @@ import java.util.List;
  *
  * @Sir Darey
  * 
- * LeetCode Daily Challenge: December 2022, Day 9
- * Problem 1026: Maximum Difference Between Node and Ancestor
+ * LeetCode Daily Challenge: December 2022, Day 10
+ * Problem 1339: Maximum Product Of Splitted Binary Tree
  *
  */
 
